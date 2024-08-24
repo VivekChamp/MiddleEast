@@ -27,7 +27,11 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+                "Sales Order" : "/custom/sales_order/sales_order_custom.js",
+                "Stock Entry" : "/custom/stock_entry/stock_entry_custom.js",
+               
+            }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -116,13 +120,12 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Stock Entry": {
+		"after_insert": "mefgo.custom.stock_entry.stock_entry_custom.after_insert",
+		"on_cancel"   : "mefgo.custom.stock_entry.stock_entry_custom.on_cancel",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

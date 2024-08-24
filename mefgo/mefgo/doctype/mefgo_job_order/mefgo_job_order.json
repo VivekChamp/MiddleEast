@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-22 18:45:37.099520",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "purchase_order_no",
+  "order_date",
+  "date_required",
+  "ref_no",
+  "customer_ref_no",
+  "customer_name",
+  "remarks",
+  "column_break_spswt",
+  "capacity",
+  "model",
+  "diameter",
+  "neck_height",
+  "tank_color",
+  "issue_stock_entry",
+  "column_break_m3lnd",
+  "purpose",
+  "type",
+  "insulatednormal",
+  "neck_type",
+  "fitting",
+  "final_stock_entry",
+  "amended_from",
+  "items_tab",
+  "item_details_section",
+  "mefgo_job_order_item",
+  "technical_spec_tab",
+  "sheet_lamination_length",
+  "cylinder_lamination",
+  "doome_lamination",
+  "rib",
+  "cylinder__doome_joining",
+  "extra",
+  "raw_material_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fieldname": "date_required",
+   "fieldtype": "Data",
+   "label": "Date Required"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SO Ref No",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Link",
+   "label": "Capacity",
+   "options": "MEFG Capacity"
+  },
+  {
+   "fieldname": "diameter",
+   "fieldtype": "Link",
+   "label": "Diameter",
+   "options": "MEFG Diameter"
+  },
+  {
+   "fieldname": "neck_height",
+   "fieldtype": "Link",
+   "label": "Neck Height",
+   "options": "MEFG Neck Height"
+  },
+  {
+   "fieldname": "tank_color",
+   "fieldtype": "Link",
+   "label": "Tank Color",
+   "options": "MEFG Tank Colour"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "MEFG Type"
+  },
+  {
+   "fieldname": "insulatednormal",
+   "fieldtype": "Data",
+   "label": "Insulated/Normal"
+  },
+  {
+   "fieldname": "neck_type",
+   "fieldtype": "Link",
+   "label": "Neck Type",
+   "options": "MEFG Type"
+  },
+  {
+   "fieldname": "fitting",
+   "fieldtype": "Link",
+   "label": "Fitting",
+   "options": "MEFG Fitting"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MEFGO Job Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "mefgo_job_order_item",
+   "fieldtype": "Table",
+   "options": "MEFGO Job Order Item"
+  },
+  {
+   "fieldname": "column_break_spswt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m3lnd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "items_tab",
+   "fieldtype": "Tab Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "technical_spec_tab",
+   "fieldtype": "Tab Break",
+   "label": "Technical Spec"
+  },
+  {
+   "fieldname": "sheet_lamination_length",
+   "fieldtype": "Data",
+   "label": "Sheet Lamination Length"
+  },
+  {
+   "fieldname": "cylinder_lamination",
+   "fieldtype": "Data",
+   "label": "Cylinder Lamination"
+  },
+  {
+   "fieldname": "doome_lamination",
+   "fieldtype": "Data",
+   "label": "Doome Lamination"
+  },
+  {
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "label": "Rib (No & Layers)"
+  },
+  {
+   "fieldname": "cylinder__doome_joining",
+   "fieldtype": "Data",
+   "label": "Cylinder & Doome Joining"
+  },
+  {
+   "fieldname": "extra",
+   "fieldtype": "Data",
+   "label": "Extra"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "issue_stock_entry",
+   "fieldtype": "Data",
+   "label": "Issue Stock Entry",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "final_stock_entry",
+   "fieldtype": "Data",
+   "label": "Final Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ref_no.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "JOB NO",
+   "options": "JO.YYYY.-.####"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "MEFG Model"
+  },
+  {
+   "fieldname": "purchase_order_no",
+   "fieldtype": "Data",
+   "label": "Purchase Order No"
+  },
+  {
+   "fetch_from": "ref_no.custom_reference_no",
+   "fieldname": "customer_ref_no",
+   "fieldtype": "Data",
+   "label": "Customer Ref No"
+  },
+  {
+   "fieldname": "raw_material_details",
+   "fieldtype": "Small Text",
+   "label": "Raw material Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Stock Entry",
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_mefgo_job_order"
+  }
+ ],
+ "modified": "2024-08-13 13:33:19.802310",
+ "modified_by": "Administrator",
+ "module": "Mefgo",
+ "name": "MEFGO Job Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
